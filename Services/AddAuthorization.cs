@@ -17,8 +17,10 @@ namespace MinimalApi.Services
                 return;
             }
             if (operation.Parameters == null)
+            {
                 operation.Parameters = new List<OpenApiParameter>();
-
+            }
+        
             operation.Security = new List<OpenApiSecurityRequirement>();
 
             //Add JWT bearer type

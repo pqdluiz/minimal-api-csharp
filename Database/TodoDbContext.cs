@@ -9,8 +9,8 @@ namespace MinimalApi.Database
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TodoItem>().ToTable("TodoItems", t => t.IsTemporal());
-            modelBuilder.Entity<User>().ToTable("Users", u => u.IsTemporal());
+            modelBuilder.Entity<TodoItem>().ToTable("TodoItems"); //u.IsTemporal()
+            modelBuilder.Entity<User>().ToTable("Users"); //u.IsTemporal()
             modelBuilder.Entity<User>().HasData(new User
             {
                 Id = 1,
